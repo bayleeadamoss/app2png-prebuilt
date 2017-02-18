@@ -1,0 +1,19 @@
+{
+  "name": "app2png-prebuilt",
+  "version": "1.0.0",
+  "description": "Extract a Mac App's icon to a png file to be used",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tinytacoteam/app2png-prebuilt.git"
+  },
+  "author": "Tiny Taco Team",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/tinytacoteam/app2png-prebuilt/issues"
+  },
+  "homepage": "https://github.com/tinytacoteam/app2png-prebuilt#readme"
+}
