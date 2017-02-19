@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 
 exec('mdfind kind:app', (err, output) => {
-  const apps = output.trim().split('\n').filter((app) => {
+  var apps = output.trim().split('\n').filter((app) => {
     const plistPath = path.join(app, 'Contents', 'Info.plist')
     return fs.existsSync(plistPath)
   }).reduce((uniqueAppList, currentApp) => {
@@ -22,8 +22,12 @@ exec('mdfind kind:app', (err, output) => {
 
   const start = new Date()
   Promise.all(apps.map((app) => {
-    const iconPath = path.join('convert_2', path.basename(app) + '.png')
-    return app2png.convert_2(app, iconPath)
+    const iconPath = path.join('convert_3', path.basename(app) + '.png')
+    return app2png.convert_3(app, iconPath).then(() => {
+      console.log('done with', app)
+    }).catch((err) => {
+      console.log('ugh', err)
+    })
   })).then(() => {
     const end = new Date()
     const endSeconds = (end - start) / 1000
