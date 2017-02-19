@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tinytacoteam/app2png-prebuilt/issues"
   },
-  "homepage": "https://github.com/tinytacoteam/app2png-prebuilt#readme"
+  "homepage": "https://github.com/tinytacoteam/app2png-prebuilt#readme",
+  "dependencies": {
+    "simple-plist": "^0.2.1"
+  }
 }
